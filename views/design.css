@@ -1,0 +1,171 @@
+header {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgb(125, 175, 158);
+    /* Change the background color if needed */
+}
+
+.header-button {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    padding: 10px 20px;
+    background-color: #c2c3abd3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lower-button {
+    position: absolute;
+    bottom: 50%;
+    left: 41%;
+    padding: 10px 15px;
+    background-color: #0e80c8d3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.table-button-edit {
+    padding: 8px 10px;
+    margin-left: 5px;
+    background-color: rgba(0, 247, 255, 0.817);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 40px;
+    width: 60px;
+
+}
+
+.table-button-delete {
+    padding: 8px 10px;
+    margin-left: 10px;
+    background-color: rgb(255, 13, 0);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 40px;
+    width: 60px;
+}
+
+
+
+/* Style for the buttons */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 15px;
+    background-color: rgb(0, 119, 255);
+    /* Blue color for buttons */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.outer-div {
+
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.add-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 15px;
+    background-color: rgb(0, 119, 255);
+    /* Blue color for buttons */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.div-main{
+
+    padding: 10px;
+
+    
+}
+
+  .header-main {
+    background-color: rgb(125, 175, 158);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-content {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  .header-button-content {
+    padding: 8px 12px;
+     background-color: #c2c3abd3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Media query for mobile responsiveness */
+  @media (max-width: 768px) {
+    .header-main{
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+    }
+
+    .header-content{
+      margin-bottom: 10px;
+    }
+
+    .header-button-content {
+      margin-top: 10px;
+    }
+  }

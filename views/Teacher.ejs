@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>studentdetails</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="design.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <header class="header-main">
+    <h5 class="header-content">Result Management System</h5>
+    <button class="header-button-content btn btn-primary"><a href="/home.html">Logout</a></button>
+  </header>
+  <br>
+
+  <div class="d-flex justify-content-between header-content">
+    <h6>Total <%-(rows.length) %> Student(s)</h6>
+    <button class="add-button"><a href="/Student.html">Add Record</a></button>
+  </div>
+  <br>
+  <div>
+    <table>
+      <tr>
+        <th>Roll No.</th>
+        <th>Name</th>
+        <th>Date Of Birth</th>
+        <th>Score</th>
+        <th>Actions</th>
+      </tr>
+      <% if(rows.length> 0) { %> <% rows.map((eachData)=> { %>
+          <tr>
+            <td><%- eachData.roll %></td>
+            <td><%- eachData.name %></td>
+            <td><%- eachData.dob %></td>
+            <td><%- eachData.score %></td>
+            <td> <button class="table-button-edit"><a href="/update-student?id=<%-eachData.id%>">Edit</a></button>
+              <button class="table-button-delete"><a href="/delete-student?id=<%-eachData.id%>">Delete</a></button>
+            </td>
+          </tr>
+          <% }) %>
+            <%} else { %>
+              <div class="col-md-12">
+                <h1 class="h2 text-center">No data found</h1>
+              </div>
+              <% }%>
+    </table>
+  </div>
+
+</body>
+
+</html>
